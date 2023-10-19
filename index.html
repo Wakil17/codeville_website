@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Fête de Codeville</title>
+    <title>Fête Surprise de Codeville</title>
 </head>
 
 <body>
@@ -15,6 +15,7 @@
             <ul>
                 <li><a href="#accueil">Accueil</a></li>
                 <li><a href="#a-propos">À Propos</a></li>
+                <li><a href="#indice">Indice</a></li>
                 <li><a href="#histoire">Histoire de Codeville</a></li>
             </ul>
         </nav>
@@ -37,9 +38,26 @@
         <p>Au fil des ans, Codeville est devenue le centre névralgique de l'innovation technologique, attirant les esprits les plus brillants du monde entier.</p>
     </section>
 
+    <section id="indice" class="otherbackground">
+        <h2>Indice sur la Fête</h2>
+        <p>Chaque année, un indice est donné concernant la nature de la fête surprise. Pouvez-vous deviner de quoi il s'agit cette année ?</p>
+        <button id="bouton-indice" onclick="afficheIndice()">Cliquez pour un indice</button>
+    </section>
+
     <footer>
         <p>© 2023, Codeville. Tous droits réservés.</p>
     </footer>
+
+    <script>
+        function afficherIndice() {
+            var indiceBloc = document.createElement('p');
+            indiceBloc.innerText = "L'indice est: Des lumières scintillantes dans le ciel nocturne!";
+            indiceBloc.classList.add('indice');
+            var indiceSection = document.getElementById('indice');
+            indiceSection.appendChild(indiceBloc);
+            document.getElementById('bouton-indice').disabled = true;
+        }
+    </script>
 </body>
 
 </html>
